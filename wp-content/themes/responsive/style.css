@@ -1,0 +1,398 @@
+/*
+Theme Name: Responsive
+Theme URI: 
+Author: the WordPress team
+Author URI: 
+Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
+Version: 1.4
+License: GNU General Public License v2 or later
+License URI: 
+Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: twentyfifteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+/**
+ * Table of Contents
+ *
+ * 1.0 - Reset
+ * 2.0 - Genericons
+ * 3.0 - Typography
+ * 4.0 - Elements
+ * 5.0 - Forms
+ * 6.0 - Navigations
+ *   6.1 - Links
+ *   6.2 - Menus
+ * 7.0 - Accessibility
+ * 8.0 - Alignments
+ * 9.0 - Clearings
+ * 10.0 - Header
+ * 11.0 - Widgets
+ * 12.0 - Content
+ *    12.1 - Posts and pages
+ *    12.2 - Post Formats
+ *    12.3 - Comments
+ * 13.0 - Footer
+ * 14.0 - Media
+ *    14.1 - Captions
+ *    14.2 - Galleries
+ * 15.0 - Multisite
+ * 16.0 - Media Queries
+ *    16.1 - Mobile Large
+ *    16.2 - Tablet Small
+ *    16.3 - Tablet Large
+ *    16.4 - Desktop Small
+ *    16.5 - Desktop Medium
+ *    16.6 - Desktop Large
+ *    16.7 - Desktop X-Large
+ * 17.0 - Print
+ */
+
+
+/**
+ * 1.0 - Reset
+ *
+ * Resetting and rebuilding styles have been helped along thanks to the fine
+ * work of Eric Meyer, Nicolas Gallagher, Jonathan Neal, and Blueprint.
+ */
+
+body{
+    background: #e6e6e6;
+}
+
+#banner{ 
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 10px;
+    min-width: 280px;
+}
+
+#banner img{
+    width: 100%;
+}
+
+#main{
+    width: 99%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    min-width: 250px;
+}
+
+#header{
+    width: 100%;
+    height: 105px;
+    display: table;
+}
+
+#header_top{
+    width: 100%;
+    height: 78px;
+    background: #ed1c24;
+}
+
+#header_top #logo{
+   width: 15%; 
+   float: left;
+   padding-left: 20px;
+   padding-top: 20px;
+   min-width: 100px;
+}
+
+#header_top #logo img{
+    width: 100%;
+}
+
+#header_top #menu{
+    width: 70%;
+    height: 55px;
+    float: left;
+    padding: 20px 0 0 0;
+    margin-left: 10%;
+    background: #ed1c24;
+}
+
+#btnMenu{
+    float: right;
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color: #FFF;
+    border: 1px solid;
+    border-radius: 5px;
+    display: none;
+}
+
+#header_top #menuM{
+    width: 70%;
+    height: 55px;
+    float: left;
+    background: #ed1c24;
+    z-index: 100;
+    position: relative;
+    display: none;
+    min-width: 150px;
+}
+
+#menuM ul li ul{
+    width:143%;
+    display:none;
+    position:absolute;
+    background:#ed1c24;
+    text-align: left;
+    margin-top: -10px;
+}
+
+#menuM nav ul li ul li a{
+    display: inline-block;
+}
+
+#menuM nav ul li ul li:hover a{
+    color: #000;
+}
+
+#menuM nav ul li #logoM{
+    width:100%;
+    padding: 10px;
+    max-width: 250px;
+}
+
+#header_top #menu nav ul{
+    list-style: none;
+}
+
+#header_top nav ul li{
+    display: inline;
+}
+
+#header_top nav ul li ul li{
+    display: inline;
+    border-bottom: 1px solid #c21c1c;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#header_top nav ul li a{
+    display: inline-block;
+    padding: 0 18px;
+}
+
+#header_top nav ul li a:hover{
+    color: #000;
+}
+
+.link-menuM{
+    color: #FFF;
+    font-family: 'Dosis';
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 50px;
+}
+    
+.seta{
+    float: right;
+    padding-right: 10px;
+}    
+
+@media screen and (max-width: 1200px) {
+    
+    #header #header_top nav ul li a{
+        display: inline-block;
+        padding: 0 10px;
+    }
+
+    .link-menu{
+        color: #FFF;
+        font-family: 'Dosis';
+        font-size: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        background: url('../img/arrow-down.png')  no-repeat center right;
+    }
+
+    .link-menu-wi{
+        color: #FFF;
+        font-family: 'Dosis';
+        font-size: 10px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .pesquisa{
+        border: none;
+        width: 10%;
+        font-family: 'Dosis';
+        font-size: 10px;
+        padding: 2px;
+        background: #FFF url('img/input-search.png') no-repeat 90% center;
+    }
+    
+    #header #header_bottom nav ul li a{
+        display: inline-block;
+        padding: 0 10px;
+    }
+   
+}
+.link-menu{
+    color: #FFF;
+    font-family: 'Dosis';
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    background: url(img/arrow-down.png)  no-repeat center right;
+}
+
+.link-menu-wi{
+    color: #FFF;
+    font-family: 'Dosis';
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.pesquisa{
+    border: none;
+    width: 14%;
+    font-family: 'Dosis';
+    font-size: 14px;
+    padding: 8px;
+    background: #FFF url('img/input-search.png') no-repeat 90% center;
+}
+
+#header_bottom{
+    width: 100%;
+    height: 28px;
+    background: url('img/header_bottom_left.png') no-repeat #000;
+    display: table;
+}
+
+#header_bottom #acessados{
+    width: 8%;
+    float: left;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+#header_bottom nav{
+    width: 85%;
+    height: 20px;
+    float: left;
+    margin-left: 2%;
+    padding-top: 5px;
+}
+
+#header_bottom nav ul{
+    list-style: none;
+}
+
+#header_bottom nav ul li{
+    display: inline;
+}
+
+#header_bottom nav ul li a{
+    display: inline-block;
+    padding: 0 18px;
+}
+
+#header_bottom nav ul li a:hover{
+    color: #ed1c24;
+}
+
+@media screen and (max-width: 500px) {
+    #middle{
+        width: 300px;
+        height: auto;
+        margin-top: 10px;
+        display: table;
+        margin: 0 auto;
+    }
+    #esq{
+        min-width: 300px;
+    }
+    
+    #middle #dir div{
+        width: 300px;
+        height: 100%;
+         margin: 0 auto;
+        margin-top: 10px;
+    }
+    
+    #footer div{
+        width: 300px;
+        height: 100%;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 501px) {
+
+    #middle{
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        display: table;
+    }
+    
+    #middle #dir div{
+        float: left;
+        width: 50%;
+        height: 50%;
+    }
+    
+    #footer div{
+        float: left;
+        width: 25%;
+        height: 100%;
+    }
+    
+}
+
+#middle #esq{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+#middle #esq div{ 
+    width: 100%;
+}
+
+#middle #esq img{
+    width: 100%;
+    max-height: 470px;
+}
+#middle #dir{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+#middle #dir div img{
+    width: 100%;
+    height: 100%;
+}
+
+#footer{
+    width: 100%;
+    height: auto;
+    display: table;
+    margin-top: 20px;
+}
+
+#footer div img{
+    width: 98%;
+}
+
+.icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #ed1c24;
+  margin: 5px;
+}
